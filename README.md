@@ -54,6 +54,12 @@ See `packages/app-rollup`.
 
 Does tree shake (assuming use of `@rollup/plugin-node-resolve`).
 
+## Webpack App
+
+See `packages/app-webpack`.
+
+Does tree shaking (no loaders or any other config except `mode: "production"` used in `webpack.config.js`).
+
 # Relevant Links
 
 - [ESM Modules in Node](https://nodejs.org/api/esm.html)
