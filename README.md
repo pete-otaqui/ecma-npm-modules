@@ -67,6 +67,5 @@ Does tree shaking (no loaders or any other config except `mode: "production"` us
 
 # TODO
 
-- Create apps for pure parcel, rollup (webpack? others?) bundlers
-- Create pure typescript app
 - Investigate `"exports": ...` in library package.json files, see Node ESM docs
+- Collate metrics for all apps into a table
