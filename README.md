@@ -32,7 +32,7 @@ Works fine! Browsers (until `import-map` is supported) need the exact file loade
 
 See `packages/app-browser-angular`.
 
-Angular's default setup does not do any tree shaking.
+Angular's default setup does not do any tree shaking, but everything works out of the box just by referencing the package name.
 
 ## Create React App
 
@@ -54,19 +54,19 @@ Note that when you have set type as "module", you can no longer use `require()`!
 
 See `packages/app-parcel`.
 
-Doesn't tree shake by default
+Doesn't tree shake by default, but does let you use Node style module resolution.
 
 ## Rollup App
 
 See `packages/app-rollup`.
 
-Does tree shake (assuming use of `@rollup/plugin-node-resolve`).
+Does tree shake, and assuming use of `@rollup/plugin-node-resolve` we can just reference the package name.
 
 ## Webpack App
 
 See `packages/app-webpack`.
 
-Does tree shaking (no loaders or any other config except `mode: "production"` used in `webpack.config.js`).
+Does tree shaking (no loaders or any other config except `mode: "production"` used in `webpack.config.js`) anfd lets us reference the package name.
 
 # Relevant Links
 
