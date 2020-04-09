@@ -1,4 +1,4 @@
-import { leftPad } from "../node_modules/mg-lib-string/src/index.js";
+import { leftPad } from "../node_modules/@ecma-modules/lib-string/src/index.js";
 
 export function getFirstFormattedDate(date = new Date()) {
   const y = date.getFullYear();

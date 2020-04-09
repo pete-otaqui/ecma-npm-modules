@@ -1,5 +1,8 @@
 {
-  "name": "mg-app-node",
+  "name": "@ecma-modules/app-node",
   "version": "0.1.0",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@ecma-modules/lib-date": "0.1.0"
+  }
 }

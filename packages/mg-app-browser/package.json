@@ -1,4 +1,13 @@
 {
-  "name": "mg-app-browser",
-  "version": "0.1.0"
+  "name": "@ecma-modules/app-browser",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {
+    "@ecma-modules/lib-date": "0.1.0"
+  },
+  "devDependencies": {
+    "serve": "11.3.0"
+  }
 }

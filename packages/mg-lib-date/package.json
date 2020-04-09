@@ -1,6 +1,9 @@
 {
-  "name": "mg-lib-date",
+  "name": "@ecma-modules/lib-date",
   "version": "0.1.0",
   "main": "src/index.js",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@ecma-modules/lib-string": "0.1.0"
+  }
 }

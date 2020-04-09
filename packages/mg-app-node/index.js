@@ -1,2 +1,2 @@
-import { getFirstFormattedDate } from "mg-lib-date";
+import { getFirstFormattedDate } from "@ecma-modules/lib-date";
 console.log(getFirstFormattedDate());
