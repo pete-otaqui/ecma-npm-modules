@@ -43,4 +43,11 @@ Note that when you have set type as "module", you can no longer use `require()`!
 
 # Relevant Links
 
+- [ESM Modules in Node](https://nodejs.org/api/esm.html)
 - [ESM Module loader warning in Node](https://github.com/nodejs/node/issues/30213), suggests that "you should not use it in production yet (or publish any node module that uses es6 modules that is meant to be used with node)".
+
+# TODO
+
+- Investigate `"exports": ...` in library package.json files, see Node ESM docs
+- Create apps for pure parcel, rollup (webpack? others?) bundlers
+- Create pure typescript app
