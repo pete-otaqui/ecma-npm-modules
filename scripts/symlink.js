@@ -3,7 +3,7 @@ const path = require("path");
 const process = require("process");
 
 const DIR_CUR = __dirname;
-const DIR_ROOT = path.resolve(DIR_CUR, "..");
+const DIR_ROOT = path.resolve(DIR_CUR, "..", "packages");
 
 const DIR_APP_BROWSER = path.resolve(DIR_ROOT, "mg-app-browser");
 const DIR_APP_BROWSER_MODULES = path.resolve(DIR_APP_BROWSER, "node_modules");
