@@ -2,7 +2,7 @@
 
 An investigation into publishing native ECMA Modules via npm and consuming them in browser and node applications.
 
-This project is a [lerna]() monorepo which contains 2 libraries, and some apps. The apps consume one of the libraries, which has a dependency on the other library.
+This project is a [lerna](https://lerna.js.org) monorepo which contains 2 libraries, and some apps. The apps consume one of the libraries, which has a dependency on the other library.
 
 The libraries are written using ECMA Module semantics (`import`, `export` and full file paths including the extension) which should theoretically work with Node, modern browsers, and various bundling systems.
 
