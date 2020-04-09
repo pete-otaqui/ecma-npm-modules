@@ -2,9 +2,15 @@
 
 An investigation into publishing native ECMA Modules via npm and consuming them in browser and node applications.
 
-# Packages in this project
+This project is a [lerna]() monorepo which contains 2 libraries, and some apps. The apps consume one of the libraries, which has a dependency on the other library.
 
-_Note that apps are written directly at the root of their package folder, but libraries have a `./src` folder. This matters because, in a lot of app contexts, there's bundler-magic to resolve `node_modules/` to be at the same level as items inside `./src`, whereas we can't do that (yet)._
+The libraries are written using ECMA Module semantics (`import`, `export` and full file paths including the extension) which should theoretically work with Node, modern browsers, and various bundling systems.
+
+Ideally in the future we will have "Import Maps" in browsers, but until then (and without wanting to any build-time / runtime dependencies) I have forgone using those purely in favour of specifying full paths where necessary.
+
+The point of this project is to understand whether it is practical to publish Ecma Modules to NPM, and whether there are any tangible costs or benefits to doing so.
+
+# Packages in this project
 
 - `lib-date`, a date formatting library which provides two date-formatting functions, both of which depend on `lib-string`
 - `lib-string`, a string formatting library which can "pad" or "quote" strings
@@ -13,6 +19,8 @@ _Note that apps are written directly at the root of their package folder, but li
 - `app-browser-cra`, a react app (created with `npx create-react-app app-browser-cra`)
 - `app-node`, a node application
 - `app-parcel`, a vanilla web application bundled using Parcel
+- `app-rollup`, a vanilla js application bundled using Rollup
+- `app-webpack`, a vanilla js application bundled using Webpack
 
 ## Vanilla Browser App
 
