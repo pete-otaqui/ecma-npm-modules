@@ -6,12 +6,12 @@ An investigation into publishing native ECMA Modules via npm and consuming them 
 
 _Note that apps are written directly at the root of their package folder, but libraries have a `./src` folder. This matters because, in a lot of app contexts, there's bundler-magic to resolve `node_modules/` to be at the same level as items inside `./src`, whereas we can't do that (yet)._
 
+- `lib-date`, a date formatting library which provides two date-formatting functions, both of which depend on `lib-string`
+- `lib-string`, a string formatting library which can "pad" or "quote" strings
 - `app-browser`, a vanilla JS browser application that requires no compilation, assuming the presence of `node_modules` and a suitable browser.
 - `app-browser-angular`, an angular app (created with `npx -p @angular/cli ng new app-browser-angular`)
 - `app-browser-cra`, a react app (created with `npx create-react-app app-browser-cra`)
 - `app-node`, a node application
-- `lib-date`, a date formatting library which provides two date-formatting functions, both of which depend on `lib-string`
-- `lib-string`, a string formatting library which can "pad" or "quote" strings
 
 ## Vanilla Browser App
 
@@ -35,7 +35,11 @@ See `packages/app-browser-cra`.
 
 See `packages/app-node`.
 
-This requires Node 13+, and you will still see a warning about "ESM Modules" being experimental, which is true.
+This requires Node 13+, and you will still see a warning about "ESM Modules" being experimental, which is true. You _don't_ need to add the `--experimental-modules` flag as long as you include `"type": "module"` in the appropriate `package.json` files.
+
+Since this is node, we can rely on `package.json` in the library to point us to the right actual file, and we don't need to include the full file path.
+
+Note that when you have set type as "module", you can no longer use `require()`!
 
 # Relevant Links
 
