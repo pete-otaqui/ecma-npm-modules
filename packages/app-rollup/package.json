@@ -1,0 +1,17 @@
+{
+  "name": "@ecma-modules/app-rollup",
+  "version": "0.1.0",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "rollup -c",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@ecma-modules/lib-date": "0.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.3.4"
+  }
+}

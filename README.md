@@ -42,6 +42,18 @@ Since this is node, we can rely on `package.json` in the library to point us to 
 
 Note that when you have set type as "module", you can no longer use `require()`!
 
+## Parcel App
+
+See `packages/app-parcel`.
+
+Doesn't tree shake by default
+
+## Rollup App
+
+See `packages/app-rollup`.
+
+Does tree shake (assuming use of `@rollup/plugin-node-resolve`).
+
 # Relevant Links
 
 - [ESM Modules in Node](https://nodejs.org/api/esm.html)
