@@ -12,6 +12,7 @@ _Note that apps are written directly at the root of their package folder, but li
 - `app-browser-angular`, an angular app (created with `npx -p @angular/cli ng new app-browser-angular`)
 - `app-browser-cra`, a react app (created with `npx create-react-app app-browser-cra`)
 - `app-node`, a node application
+- `app-parcel`, a vanilla web application bundled using Parcel
 
 ## Vanilla Browser App
 
@@ -48,6 +49,6 @@ Note that when you have set type as "module", you can no longer use `require()`!
 
 # TODO
 
-- Investigate `"exports": ...` in library package.json files, see Node ESM docs
 - Create apps for pure parcel, rollup (webpack? others?) bundlers
 - Create pure typescript app
+- Investigate `"exports": ...` in library package.json files, see Node ESM docs
