@@ -1,0 +1,8 @@
+{
+  "name": "mg",
+  "version": "0.1.0",
+  "scripts": {
+    "symlink": "node ./scripts/symlink.js",
+    "postinstall": "npm run symlink"
+  }
+}
