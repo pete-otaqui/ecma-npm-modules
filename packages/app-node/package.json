@@ -4,5 +4,8 @@
   "type": "module",
   "dependencies": {
     "@ecma-modules/lib-date": "0.1.0"
+  },
+  "engines": {
+    "node": ">=13.12.0"
   }
 }
