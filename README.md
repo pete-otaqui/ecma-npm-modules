@@ -22,6 +22,26 @@ The point of this project is to understand whether it is practical to publish Ec
 - `app-rollup`, a vanilla js application bundled using Rollup
 - `app-webpack`, a vanilla js application bundled using Webpack
 
+# Scripts
+
+You can run `npm run bootstrap` at the root to make sure that `lerna` has created all the symlinks for you.
+
+Then run `npm run build` to build all of the projects that require it (all the `app-*` projects except `app-browser` and `app-node`). That will run the build scripts in each package and you can inspect the results (usually in either a `dist/` or `build/` folder).
+
+# Results
+
+| Project Name    | Path                  | Import Style | Tree Shaking |
+| --------------- | --------------------- | ------------ | :----------: |
+| Native Browser  | `app-browser`         | Full Path    |      ❌      |
+| Angular         | `app-browser-angular` | Node         |      ❌      |
+| React (CRA)     | `app-browser-cra`     | Node         |      ✅      |
+| Node            | `app-node`            | Node         |      ❌      |
+| Parcel          | `app-parcel`          | Node         |      ❌      |
+| Rollup + Plugin | `app-rollup`          | Node         |      ✅      |
+| Webpack         | `app-webpack`         | Node         |      ✅      |
+
+# Project Notes
+
 ## Vanilla Browser App
 
 See `packages/app-browser`.
