@@ -44,25 +44,25 @@ Then run `npm run build` to build all of the projects that require it (all the `
 
 ## Vanilla Browser App
 
-See `packages/app-browser`.
+See [./packages/app-browser/index.html](./packages/app-browser/index.html).
 
 Works fine! Browsers (until `import-map` is supported) need the exact file loaded. Since the published libraries are written in a browser-supporting manner (i.e. they `import` full file paths including the extension) the user can either `import` the root module, or a specific file that they require. In either case, a full file path is required, and there can be no tree-shaking (if you import the root file of a module that itself imports 2 things, but you only use one, everything will be loaded by the browser).
 
 ## Angular
 
-See `packages/app-browser-angular`.
+See [./packages/app-browser-angular/src/app/app.component.ts](./packages/app-browser-angular/src/app/app.component.ts).
 
 Angular's default setup does not do any tree shaking, but everything works out of the box just by referencing the package name.
 
 ## Create React App
 
-See `packages/app-browser-cra`.
+See [./packages/app-browser-cra/src/App.js](./packages/app-browser-cra/src/App.js).
 
 `create-react-app`s webpack setup tree-shakes the loaded modules when building. Only the imported functions (from the direct dependency and the transitive one) are loaded. You can see this in the built output (the code will be in the `main.{HASH}.chunk.js` file).
 
 ## Node App
 
-See `packages/app-node`.
+See [./packages/app-node/index.js](./packages/app-node/index.js).
 
 This requires Node 13+, and you will still see a warning about "ESM Modules" being experimental, which is true. You _don't_ need to add the `--experimental-modules` flag as long as you include `"type": "module"` in the appropriate `package.json` files.
 
@@ -72,19 +72,19 @@ Note that when you have set type as "module", you can no longer use `require()`!
 
 ## Parcel App
 
-See `packages/app-parcel`.
+See [./packages/app-parcel/index.js](./packages/app-parcel/index.js).
 
 Doesn't tree shake by default, but does let you use Node style module resolution.
 
 ## Rollup App
 
-See `packages/app-rollup`.
+See [./packages/app-rollup/index.js](./packages/app-rollup/index.js).
 
 Does tree shake, and assuming use of `@rollup/plugin-node-resolve` we can just reference the package name.
 
 ## Webpack App
 
-See `packages/app-webpack`.
+See [./packages/app-webpack/src/index.js](./packages/app-webpack/src/index.js).
 
 Does tree shaking (no loaders or any other config except `mode: "production"` used in `webpack.config.js`) anfd lets us reference the package name.
 
